@@ -4,12 +4,10 @@ function init(){
     fetch(url)
         .then(data => data.json())
         .then(response => {
-            console.log(response);
-            const sorted = response.sort((a, b) => a.hoursInSpace - b.hoursInSpace)
-            console.log(sorted)
             const container = document.getElementById("container");
             const h1 = document.querySelector('h1');
             const p = document.createElement('span');
+            
             p.innerHTML = " " + response.length;
             h1.appendChild(p);
 
